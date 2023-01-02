@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codewarsTutorials</title>
+    <style type = 'text/css'>
+        body {
+            font-family:      Verdana, Geneva, Arial, sans-serif;
+            font-size:        small;
+            background-color: #EBDCB2;
+        }
+        table{
+            margin-left:      0px;
+            margin-right:     0px;
+            border:           thin solid black;
+            border-collapse:  collapse;
+        }
+        td, th {
+            border:           thin solid gray;
+            padding:          5px;
+            text-align:       start;
+            vertical-align:   top;
+            width: 25%;
+        }
+        th {
+            text-align:       center;
+            background-color: #C9A66B;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4">
+            Training JS #31: methods of arrayObject---isArray() indexOf() and toString() <br>
+            <a href="codewarsTutorials31.jpg" target="_blank">IMG - Training JS #31: methods of arrayObject---isArray() indexOf() and toString()</a>
+        </th>
+
+    </tr>
+    <tr>
+        <td>
+            function blackAndWhite(arr){ <br>
+                if (!Array.isArray(arr)) <br> return `It's a fake array` <br>
+                else if (arr.includes(5) && arr.includes(13)) <br> return `It's a black array` <br>
+                else return `It's a white array` <br>
+            } <br>
+            alert(blackAndWhite([5,13])) // `It's a black array` <br>
+            alert(blackAndWhite([5,12])) // `It's a white array` <br>
+        </td>
+        <td>
+            function blackAndWhite(arr){ <br>
+                if ( !Array.isArray( arr ) ) <br> return 'It\'s a fake array' <br>
+                if ( arr.indexOf( 5 ) != -1 && arr.indexOf( 13 ) != -1 ) <br> return 'It\'s a black array' <br>
+                return 'It\'s a white array' <br>
+              } <br>
+            alert(blackAndWhite([5,13])) // `It's a black array` <br>
+            alert(blackAndWhite([5,12])) // `It's a white array` <br>
+  
+        </td>
+        <td>
+            const blackAndWhite = arr => <br>
+            `It's a ${!Array.isArray(arr) <br> ? `fake` <br> : arr.includes(5) && arr.includes(13) <br> ? `black` <br> : `white`} array`; <br>
+            alert(blackAndWhite([5,13])) // `It's a black array` <br>
+            alert(blackAndWhite([5,12])) // `It's a white array` <br>
+        </td>
+        <td>
+            function blackAndWhite(arr){ <br>
+                return `It's a ${Array.isArray(arr) <br> ? arr.indexOf(5) != -1 && arr.indexOf(13) != -1 ? 'black' <br> : 'white' <br> : 'fake'} array`; <br>
+            } <br>
+            alert(blackAndWhite([5,13])) // `It's a black array` <br>
+            alert(blackAndWhite([5,12])) // `It's a white array` <br>
+  
+        </td>
+    </tr>
+</table>
+
+
+
+<script>
+    
+    // function blackAndWhite(arr){
+    //     if (!Array.isArray(arr)) return `It's a fake array`
+    //     else if (arr.includes(5) && arr.includes(13)) return `It's a black array`
+    //     else return `It's a white array`
+    // }
+    // alert(blackAndWhite([5,13])) // `It's a black array`
+    // alert(blackAndWhite([5,12])) // `It's a white array`
+
+    
+    
+        </script>
+</body>
+</html>
